@@ -12,6 +12,36 @@ function mapCategories(productCategories) {
   };
 }
 
+function mapProduct(product) {
+  if (!product) return null;
+
+  return {
+    id: product.id,
+    pccomponentesId: product.pccomponentesId,
+    title: product.title,
+    category: product.category
+  };
+}
+
+function mapPrice(price) {
+  return {
+    price: price.price,
+    stock: price.stock,
+    date: price.createdAt
+  };
+}
+
+function mapProductPrices(mapProductPrices) {
+  return _.map(mapProductPrices, price => mapPrice(price));
+}
+
+function mapProducts(products) {
+  return _.map(products, product => mapProduct(product));
+}
+
 module.exports = {
-  mapCategories: mapCategories
+  mapCategories: mapCategories,
+  mapProduct: mapProduct,
+  mapProductPrices: mapProductPrices,
+  mapProducts: mapProducts
 };
