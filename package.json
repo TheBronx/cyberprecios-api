@@ -1,0 +1,30 @@
+{
+  "name": "cyberprecios-api",
+  "version": "1.0.0",
+  "description": "cyberprecios-api",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.23.2",
+    "sqlite3": "^3.1.13",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBronx/cyberprecios-api.git"
+  },
+  "author": "Salvatore <labajos.salvatore@gmail.com> (http://salvatorelab.es/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBronx/cyberprecios-api/issues"
+  },
+  "homepage": "https://github.com/TheBronx/cyberprecios-api#readme"
+}
