@@ -18,7 +18,10 @@ function findProductPrices(productId) {
   return models.Price.findAll({
     where: {
       productId: productId
-    }
+    },
+    order: [
+      ['createdAt', 'ASC'] //old prices first
+    ]
   });
 }
 
@@ -26,7 +29,10 @@ function findProductsInCategory(categoryId) {
   return models.Product.findAll({
     where: {
       category: categoryId
-    }
+    },
+    order: [
+      ['createdAt', 'DESC'] //new products first
+    ]
   });
 }
 
