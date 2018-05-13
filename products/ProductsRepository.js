@@ -10,7 +10,10 @@ function findProduct(productId) {
   return models.Product.findOne({
     where: {
       id: productId
-    }
+    },
+    include: [
+      models.Picture
+    ]
   });
 }
 
@@ -32,6 +35,9 @@ function findProductsInCategory(categoryId) {
     },
     order: [
       ['createdAt', 'DESC'] //new products first
+    ],
+    include: [
+      models.Picture
     ]
   });
 }

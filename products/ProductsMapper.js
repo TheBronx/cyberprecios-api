@@ -12,6 +12,18 @@ function mapCategories(productCategories) {
   };
 }
 
+function mapPictures(product) {
+  if (!product.Pictures) return [];
+
+  var pictures = [];
+  product.Pictures.forEach(pic => {
+    pictures.push({
+      url: pic.url
+    });
+  });
+  return pictures;
+}
+
 function mapProduct(product) {
   if (!product) return null;
 
@@ -19,7 +31,10 @@ function mapProduct(product) {
     id: product.id,
     pccomponentesId: product.pccomponentesId,
     title: product.title,
-    category: product.category
+    category: product.category,
+    pccomponentesURL: product.pccomponentesURL,
+    amazonURL: product.amazonURL,
+    pictures: mapPictures(product)
   };
 }
 
